@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        //함수(function)란 하나의 로직을 재실행 할 수 있도록 하는 것으로 코드의 재사용성을 높여줌, 유지보수 용이, 가독성 좋음.
+
+        function 함수명() {
+            코드
+            return 반환값
+        }
+
+        // 예제1
+        function numbering() {
+            i = 0;
+            while(i < 10){
+                document.write(i);
+                i += 1;
+            }
+        }
+        numbering();       // 이 넘버링이란 함수의 위의 함수가 재사용된 것
+        numbering();
+        numbering();
+
+        // 예제2
+        for(var i = 0; i < 1000; i++) {
+            var i = 0;
+            while(i < 10){
+                document.write(i);
+                i += 1;
+            }
+        }
+
+        // 함수의 입력
+        function get_member1() {
+            return 'egoing';
+        }
+        alert(get_member());
+
+        // 함수의 출력
+        function get_argument(arg) {
+            return arg;
+        }
+        alert(get_argument(1)); // arg는 1로 출력 됌
+
+        // 예제1 - 복수의 인자
+        function get_argument(arg1, arg2) {
+            return arg1 + arg2;
+        }
+        alert(get_arguments(10, 20));
+
+        // 함수 정의 다른 방법 1
+        numbering = function() {
+            i = 0;
+            while(1 < 10){
+                document.write(i);
+                i += 1;
+            }
+        }
+
+        // 함수 정의 다른 방법 2 (익명함수: 일회성일때 주로 사용)
+        (function (){
+            i = 0;
+            while(i < 10){
+                document.write(i);
+                i += 1;
+            }
+        }) ();
+
+    </script>
+    
+</body>
+</html>
